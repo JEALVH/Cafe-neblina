@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded',function(){
-    const header=documet.querySelector('.header');
+    const header=document.querySelector('.header');
     const menuLinks=document.querySelectorAll('.menu a');
     const videoBackgrouund=document.querySelector('.video-background');
     const headerContent=document.querySelector('.header-content');
