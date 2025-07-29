@@ -1,17 +1,20 @@
 document.addEventListener('DOMContentLoaded',function(){
     const header=document.querySelector('.header');
+    const headerContent=document.querySelector('.header-content');  
     const menuLinks=document.querySelectorAll('.menu a');
-    const videoBackgrouund=document.querySelector('.video-background');
-    const headerContent=document.querySelector('.header-content');
-
+    const videoBackground=document.querySelector('.video-background');
+    
     window.addEventListener('scroll',function(){
-        if (window.scrollY>100){
-            header.style.height='80px'
-            headerContent.style.backgroundColor='rgba(0,0,0,0.8)'   
+        const scrollPosition=window.scrollY;
+
+        if (scrollPosition>100){
+            header.classList.add('scrolled');
+            headerContent.style.backgroundColor='rgba(0,0,0,0.8)';
         }else{
-            heade.style.height='100vh';
-            headerContent.style.backgroundColor='rgba(0,0,0,0.3)'
+            header.classList.remove('scrolled');
+            headerContent.style.backgroundColor='rgba(0,0,0,0.1)';
         }
+
     });
 })
 
